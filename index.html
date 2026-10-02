@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Гусиная Рулетка</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="header">
+    <div class="title">🎰 Гусиная Рулетка</div>
+    <div class="subtitle" id="round-label">Загрузка…</div>
+  </header>
+
+  <div class="card jackpot-card">
+    <div class="jackpot-label">💎 ДЖЕКПОТ</div>
+    <div class="jackpot-value" id="jackpot">—</div>
+    <div class="jackpot-hint" id="jackpot-hint"></div>
+  </div>
+
+  <div class="card">
+    <div class="row"><span>💰 Банк тиража</span><b id="bank">—</b></div>
+    <div class="row"><span>🎟 Билетов продано</span><b id="tickets-sold">—</b></div>
+    <div class="row"><span>⏳ До закрытия</span><b id="remaining">—</b></div>
+    <div class="progress"><div id="progress-bar"></div></div>
+  </div>
+
+  <div class="card">
+    <div class="row"><span>💵 Ваш баланс</span><b id="balance">—</b></div>
+    <div class="row"><span>🎫 Ваши билеты</span><b id="my-tickets">—</b></div>
+  </div>
+
+  <button class="btn primary" id="buy-btn">Купить билет</button>
+  <button class="btn secondary" id="refresh-btn">🔄 Обновить</button>
+  <button class="btn secondary" id="history-btn">📜 История тиражей</button>
+  <div class="hint" id="hint"></div>
+
+  <div class="card">
+    <div class="section-title">👥 Билеты тиража</div>
+    <div id="ticket-list" class="ticket-list"></div>
+  </div>
+
+  <div class="card small">
+    <div class="section-title">🛡 Честность (commit-reveal)</div>
+    <div class="seed-label">SHA-256 seed (до закрытия тиража):</div>
+    <div class="seed" id="seed-hash">—</div>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
